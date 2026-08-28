@@ -1,0 +1,161 @@
+% GitHub Repo and Documentation: https://github.com/celiobjunior/resume-template
+% Copyright © 2025 Celio B Junior. All rights reserved.
+% 
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% This template follows best practices from README.md
+
+% Início do documento LaTeX: define tipo e formato do documento
+% a4paper = tamanho A4, 10pt = tamanho base da fonte
+\documentclass[a4paper,10pt]{article}
+
+% --- PACOTES: BASE / IDIOMA ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+% --- PACOTES: LAYOUT / TIPOGRAFIA ---
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+% --- PACOTES: LINKS / BOOKMARKS ---
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+
+% --- CONFIGURAÇÃO: MARGENS / ESPAÇAMENTO ---
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm} % Margens da página
+\setcounter{secnumdepth}{0}                                 % Remove numeração de seção
+\setlist[itemize]{
+    leftmargin=0.75em, % Recuo da lista (mais perto da margem da página)
+    itemsep=0.2em,     % Espaço entre itens
+    topsep=0.25em,     % Espaço antes/depois da lista
+    parsep=0em,        % Espaço entre parágrafos no mesmo item
+    partopsep=0em      % Espaço extra ao iniciar a lista
+}
+
+% Remove números de página e cabeçalhos para visual limpo do currículo
+\pagestyle{empty}
+
+% --- CONFIGURAÇÃO: METADADOS / LINKS ---
+\hypersetup{
+    pdftitle={CV Gabriela Nogueira},   % Título do PDF
+    pdfauthor={Gabriela Nogueira},     % Autor do PDF
+    colorlinks=true,          % Usa cor nos links (sem caixa)
+    linkcolor=black,          % Cor de links internos
+    urlcolor=black,           % Cor de URLs
+    citecolor=black,          % Cor de citações
+    bookmarksdepth=2          % Barra lateral: seção e subseção
+}
+
+% --- CONFIGURAÇÃO: TÍTULOS ---
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}
+[\titlerule\vspace{0.5ex}]
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+\titlespacing*{\subsection}{0pt}{0.35em}{0.15em}
+
+% Macro para entradas do currículo com bookmark no PDF
+\newcounter{cventry}
+\newcommand{\cventry}[4]{%
+    \refstepcounter{cventry}%
+    \phantomsection%
+    \pdfbookmark[2]{#1}{cventry-\thecventry}%
+    \noindent\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+}
+
+% --- INÍCIO DO DOCUMENTO ---
+\begin{document}
+
+% --- CABEÇALHO ---
+% Substitua por suas informações pessoais
+\begin{center}
+    {\LARGE \textbf{Gabriela Nogueira}} 
+    \\ [0.1cm]
+    Limeira, São Paulo
+    {\textbullet}
+    \href{mailto:nogueiragabriela361@gmail.com}{nogueiragabriela361@gmail.com} 
+    {\textbullet}
+    \href{https://linkedin.com/in/gabriela-nogueira-5a04a5351}{https://linkedin.com/in/gabriela-nogueira-5a04a5351} 
+    {\textbullet}
+    \href{https://github.com/GabrielaNogueira2}{https://github.com/GabrielaNogueira2}
+\end{center}
+
+% --- SEÇÕES ---
+
+\section{Educação}
+    % Formação mais recente primeiro
+    \cventry{UNICAMP (Universidade de Campinas)}{Limeira - SP}{Tecnológo em Analise e Desenvolvimento de Sistemas}{4 semestre - Fevereiro de 2025 - Julho de 2028}
+    
+    \cventry{7°Colégio da Polícia Militar do Paraná}{União da Vitória - PR}{Ensino Médio Regular}{2022 - 2024}
+% ------
+\section{Atividades de Liderança}
+    % Inclua trabalho voluntário, ligas acadêmicas ou cargos de liderança
+    \cventry{Liga de Data Science}{Limeira - SP)}{Diretora de Training}{outubro de 2025 - atualmente}
+        \begin{itemize}
+            % Use verbos de ação do README - quantifique seu impacto quando possível
+            \item Implementei uma nova metodologia de exercícios práticos nas capacitações utilizando o Google Classroom, alcançando uma taxa de engajamento e entrega de atividades de 95\% entre os membros.
+            \item Expandi a diretoria de Training de 6 para 10 membros — tornando-a a maior área na história da liga — para viabilizar a criação de novas iniciativas e formatos de ensino.
+            \item Conduzi a equipe à quebra do recorde histórico de capacitações em um único semestre, entregando dois treinamentos intensivos de dois dias, com material didático completo (apostilas e exercícios).
+            \item Coordenei um evento externo de 8 dias voltado ao incentivo à pesquisa, gerenciando 20 membros de diferentes áreas da liga e estabelecendo parcerias estratégicas com duas outras organizações.
+        \end{itemize}
+
+% ------
+
+\section{Experiência}
+    % Liste suas experiências profissionais ou acadêmicas, da mais recente para a mais antiga
+    \cventry{Embaixadoras da Ciência e Tecnologia}{Limeira - SP}{Membro do Projeto de Extensão}{Fevereiro de 2026 - atualmente}
+        \begin{itemize}
+            \item Atuo ativamente no incentivo e inclusão de mulheres nas áreas de STEM, planejando e executando palestras e dinâmicas para alunas do ensino fundamental.
+            \item Organizo atividades de divulgação científica, incluindo apresentações teatrais sobre figuras femininas históricas da ciência, visando desmistificar e aproximar a área de tecnologia do público jovem.
+        \end{itemize}
+
+    \cventry{PMU (Programa de Mentoria da Unicamp)}{Limeira - SP}{Mentora de Ingressantes}{Agosto de 2026 - atualmente}
+        \begin{itemize}
+            \item Fui responsável por guiar e integrar calouras durante o semestre letivo, facilitando a adaptação à rotina universitária através de acompanhamento contínuo, aconselhamento e desenvolvimento de um ambiente de escuta ativa e suporte.
+        \end{itemize}
+
+    \cventry{Centro Acadêmico de Informática (CDI)}{Limeira - SP}{Membro Ativa}{Janeiro de 2025 - Novembro de 2025}
+        \begin{itemize}
+            \item Colaborei na organização de eventos institucionais e estudantis, auxiliando na logística e na comunicação com os alunos.
+            \item Desenvolvi materiais de apoio do zero, como um guia estruturado de contatos e informações da faculdade, com o objetivo de otimizar e facilitar a integração dos novos estudantes.
+        \end{itemize}
+
+    \cventry{FTPA (Faculdade de Tecnologia de Portas Abertas)}{Limeira - SP}{Guia Institucional}{Setembro de 2025}
+        \begin{itemize}
+            \item Atuei como representante e guia na primeira edição do evento, sendo responsável por apresentar a infraestrutura da faculdade, os cursos e a vivência acadêmica para estudantes do ensino médio.
+        \end{itemize}
+% ------
+
+\section{Habilidades}
+    % Mantenha esta seção concisa e use o máximo de palavras-chave
+    % que fazem sentido para a vaga que você deseja.
+    \begin{itemize}
+        \item{\textbf{Linguagens:}Python, C, SQL, Java (Básico)}
+        \item{\textbf{Data Science \& Libs:}Pandas, NumPy, Matplotlib, SQLAlchemy, Streamlit (Básico)} 
+        \item{\textbf{Ferramentas:}Git/GitHub, Power BI, Google Workspace}
+        \item{\textbf{Conhecimentos:}Visualização de Dados, Machine Learning (Básico), Agentes de IA (LLMs), Engenharia de Prompt}
+        \item{\textbf{Habilidades Comportamentais:} Criatividade, Comunicação Assertiva, Visão Analítica, Resiliência, Autonomia e Aprendizado Contínuo.}
+        \item{\textbf{Idiomas:}Português (Nativo), Inglês (B1)} 
+    \end{itemize}
+
+\end{document}
