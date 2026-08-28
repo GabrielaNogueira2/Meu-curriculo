@@ -9,16 +9,16 @@
 %
 % This template follows best practices from README.md
 
-% Start of the LaTeX document: defines document type and format
-% a4paper = A4 size, 10pt = base font size
+% Início do documento LaTeX: define tipo e formato do documento
+% a4paper = tamanho A4, 10pt = tamanho base da fonte
 \documentclass[a4paper,10pt]{article}
 
-% --- PACKAGES: BASE / LANGUAGE ---
+% --- PACOTES: BASE / IDIOMA ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[portuguese]{babel}
 
-% --- PACKAGES: LAYOUT / TYPOGRAPHY ---
+% --- PACOTES: LAYOUT / TIPOGRAFIA ---
 \usepackage{geometry}
 \usepackage{parskip}
 \usepackage{microtype}
@@ -27,37 +27,37 @@
 \usepackage{array}
 \usepackage{tabularx}
 
-% --- PACKAGES: LINKS / BOOKMARKS ---
+% --- PACOTES: LINKS / BOOKMARKS ---
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage{xurl}
 
-% --- SETTINGS: MARGINS / SPACING ---
-\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm} % Page margins
-\setcounter{secnumdepth}{0}                                 % Removes section numbering
+% --- CONFIGURAÇÃO: MARGENS / ESPAÇAMENTO ---
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm} % Margens da página
+\setcounter{secnumdepth}{0}                                 % Remove numeração de seção
 \setlist[itemize]{
-    leftmargin=0.75em, % List indentation (closer to page margin)
-    itemsep=0.2em,     % Space between items
-    topsep=0.25em,     % Space before/after list
-    parsep=0em,        % Space between paragraphs in same item
-    partopsep=0em      % Extra spacing at list start
+    leftmargin=0.75em, % Recuo da lista (mais perto da margem da página)
+    itemsep=0.2em,     % Espaço entre itens
+    topsep=0.25em,     % Espaço antes/depois da lista
+    parsep=0em,        % Espaço entre parágrafos no mesmo item
+    partopsep=0em      % Espaço extra ao iniciar a lista
 }
 
-% Removes page numbers and headers for a clean resume layout
+% Remove números de página e cabeçalhos para visual limpo do currículo
 \pagestyle{empty}
 
-% --- SETTINGS: METADATA / LINKS ---
+% --- CONFIGURAÇÃO: METADADOS / LINKS ---
 \hypersetup{
-    pdftitle={CV Your Name},   % PDF title
-    pdfauthor={Your Name},     % PDF author
-    colorlinks=true,           % Uses colored links (no boxes)
-    linkcolor=black,           % Internal links color
-    urlcolor=black,            % URLs color
-    citecolor=black,           % Citations color
-    bookmarksdepth=2           % Sidebar: section and subsection
+    pdftitle={CV Gabriela Nogueira},   % Título do PDF
+    pdfauthor={Gabriela Nogueira},     % Autor do PDF
+    colorlinks=true,          % Usa cor nos links (sem caixa)
+    linkcolor=black,          % Cor de links internos
+    urlcolor=black,           % Cor de URLs
+    citecolor=black,          % Cor de citações
+    bookmarksdepth=2          % Barra lateral: seção e subseção
 }
 
-% --- SETTINGS: TITLES ---
+% --- CONFIGURAÇÃO: TÍTULOS ---
 \titleformat{\section}
 {\Large\bfseries}
 {}
@@ -71,7 +71,7 @@
 {}
 \titlespacing*{\subsection}{0pt}{0.35em}{0.15em}
 
-% Macro for resume entries with PDF bookmark
+% Macro para entradas do currículo com bookmark no PDF
 \newcounter{cventry}
 \newcommand{\cventry}[4]{%
     \refstepcounter{cventry}%
@@ -83,69 +83,79 @@
     \end{tabularx}
 }
 
-% --- START OF DOCUMENT ---
+% --- INÍCIO DO DOCUMENTO ---
 \begin{document}
 
-% --- HEADER ---
-% Replace with your personal information
+% --- CABEÇALHO ---
+% Substitua por suas informações pessoais
 \begin{center}
-    {\LARGE \textbf{Full Name}} 
+    {\LARGE \textbf{Gabriela Nogueira}} 
     \\ [0.1cm]
-    City, State
+    Limeira, São Paulo
     {\textbullet}
-    \href{mailto:your.email@example.com}{your.email@example.com} 
+    \href{mailto:nogueiragabriela361@gmail.com}{nogueiragabriela361@gmail.com} 
     {\textbullet}
-    \href{https://linkedin.com/in/username}{linkedin.com/in/username} 
+    \href{https://linkedin.com/in/gabriela-nogueira-5a04a5351}{https://linkedin.com/in/gabriela-nogueira-5a04a5351} 
     {\textbullet}
-    \href{https://github.com/username}{github.com/username}
+    \href{https://github.com/GabrielaNogueira2}{https://github.com/GabrielaNogueira2}
 \end{center}
 
 % --- SECTIONS ---
 
+% ------
+\section{Education}
+\cventry{UNICAMP (State University of Campinas)}{Limeira, SP}{Associate Degree in Systems Analysis and Development (4th semester)}{February 2025 -- July 2028}
+ 
+\cventry{7th Military Police College of Paraná}{União da Vitória, PR}{High School Diploma}{2022 -- 2024}
+
+% ------
+
 \section{Leadership Activities}
-    % Include volunteer work, academic clubs, or leadership positions
-    \cventry{Company/Organization Name}{Location (e.g., Remote or State, Country)}{Your Role/Position}{Start Date - End Date (e.g., Jan 2024 - Present)}
-        \begin{itemize}
-            % Use action verbs from README - quantify your impact whenever possible
-            \item Describe a meaningful leadership achievement with specific metrics.
-            \item Highlight how you managed teams, led initiatives, or drove outcomes.
-            \item Show impact on the organization or community you served.
-        \end{itemize}
-
+ 
+\cventry{Data Science League}{Limeira, SP}{Training Director}{October 2025 -- Present}
+\begin{itemize}
+  \item Implemented a new hands-on exercise methodology for trainings using Google Classroom, achieving a 95\% engagement and completion rate among members.
+  \item Grew the Training department from 6 to 10 members --- the largest area in the league's history --- enabling the creation of new initiatives and teaching formats.
+  \item Led the team to break the league's historical record for trainings delivered in a single semester, running two two-day intensive workshops with complete teaching materials (workbooks and exercises).
+  \item Coordinated an 8-day external event focused on promoting research, managing 20 members across different areas of the league and establishing strategic partnerships with two other organizations.
+\end{itemize}
+ 
 % ------
-
 \section{Experience}
-    % List your professional or academic experiences, most recent first
-    \cventry{Company/Organization Name}{Location (e.g., Remote or State, Country)}{Role (e.g., Software Engineer, Data Analyst)}{Start Date - End Date}
-        \begin{itemize}
-            % Focus on achievements, not only technical details - use the STAR method (Situation, Task, Action, Result)
-            \item Achieved [specific result] through [action taken], resulting in [quantified impact].
-            \item Developed/Built/Created [what you did] using [technologies/methods], resulting in [benefit].
-            \item Collaborated with [team size/type] to [accomplish what], improving [metric] by [percentage/amount].
-        \end{itemize}
-
-    \cventry{Company/Organization Name}{Location (e.g., Remote or State, Country)}{Role (e.g., Junior Developer, Research Assistant)}{Start Date - End Date}
-        \begin{itemize}
-            \item Use active verbs from the action verbs table in README.md
-            \item Quantify your achievements whenever possible (numbers, percentages, deadlines)
-            \item Show progression and increasing responsibility across roles
-        \end{itemize}
-
-    \cventry{University/Research Institution}{Location (e.g., Remote or State, Country)}{Role (e.g., Undergraduate Researcher, Teaching Assistant)}{Start Date - End Date}
-        \begin{itemize}
-            \item Include research, academic work, or projects that demonstrate technical skills
-            \item Highlight publications, presentations, or meaningful findings
-        \end{itemize}
-
+ 
+\cventry{Science and Technology Ambassadors}{Limeira, SP}{Outreach Project Member}{February 2026 -- Present}
+\begin{itemize}
+  \item Actively promote the inclusion of women in STEM fields by planning and leading talks and activities for elementary school students.
+  \item Organize science outreach initiatives, including theatrical presentations on historical women in science, to demystify and bring technology closer to younger audiences.
+\end{itemize}
+ 
+\cventry{PMU (UNICAMP Mentoring Program)}{Limeira, SP}{Incoming Student Mentor}{August 2026 -- Present}
+\begin{itemize}
+  \item Guided and integrated incoming students throughout the semester, easing their adaptation to university life through ongoing support, advice, and active listening.
+\end{itemize}
+ 
+\cventry{Computer Science Student Association (CDI)}{Limeira, SP}{Active Member}{January 2025 -- November 2025}
+\begin{itemize}
+  \item Helped organize institutional and student events, supporting logistics and communication with students.
+  \item Built support materials from scratch, including a structured guide of university contacts and information, to help new students settle in.
+\end{itemize}
+ 
+\cventry{FTPA (Faculdade de Tecnologia de Portas Abertas)}{Limeira, SP}{Institutional Guide}{September 2025}
+\begin{itemize}
+  \item Represented and guided visitors during the event's first edition, presenting the school's facilities, programs, and academic life to high school students.
+\end{itemize}
+ 
 % ------
-
 \section{Skills}
-    % Keep this section concise and use as many keywords as possible
-    % that are relevant to the role you want.
-    \begin{itemize}
-        \item \textbf{Technical:} List your programming languages, frameworks, tools, and methodologies
-        \item \textbf{Languages:} Portuguese (Native), English (Proficiency Level), Third Language (Proficiency Level)
-    \end{itemize}
+ 
+\begin{itemize}
+  \item \textbf{Programming Languages:} Python, C, SQL, Java (Basic)
+  \item \textbf{Data Science \& Libraries:} Pandas, NumPy, Matplotlib, SQLAlchemy, Streamlit (Basic)
+  \item \textbf{Tools:} Git/GitHub, Power BI, Google Workspace
+  \item \textbf{Knowledge:} Data Visualization, Machine Learning (Basic), AI Agents (LLMs), Prompt Engineering
+  \item \textbf{Soft Skills:} Creativity, Assertive Communication, Analytical Thinking, Resilience, Autonomy, Continuous Learning
+  \item \textbf{Languages:} Portuguese (Native), English (B1)
+\end{itemize}
 
 % ------
 
@@ -154,9 +164,5 @@
 % your experiences, if you are looking for your first
 % job or an internship. Otherwise, leave it as is.
 % !!!!!!!!!!!!!!!!!!!!!!
-
-\section{Education}
-    % Most recent education first
-    \cventry{Your University Name}{Location (e.g., Remote or State, Country)}{Your Degree Title (e.g., B.S. in Computer Science)}{Start Date - End Date (e.g., Jan 2020 - Dec 2024)}
 
 \end{document}
